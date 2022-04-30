@@ -7,22 +7,6 @@ import {Card, Text, ButtonGroup } from '@rneui/themed';
 import dailyImg from './assets/placeholder.jpg'; 
 
 
-// Start of code from: https://stackoverflow.com/questions/2627473/how-to-calculate-the-number-of-days-between-two-dates
-// const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
-// const launchDate = new Date(2022, 4, 31);
-// const d = new Date();
-// let currentDate = new Date(d.getFullYear(), d.getMonth, d.getDate);
-// let dayNum;
-
-// function diffDays(firstDate, secondDate){
-//   dayNum = Math.round(Math.abs((firstDate - secondDate) / oneDay));
-// } 
-// end of code from: https://stackoverflow.com/questions/2627473/how-to-calculate-the-number-of-days-between-two-dates
-
-//.addEventListener("load", diffDays(launchDate, currentDate));
-//onLoad={({nativeEvent: {source: {width, height}}}) => setImageRealSize({width, height})}
-
-
 const articles = [
   {
     catgory: 'menstruation',
@@ -64,10 +48,39 @@ const articles = [
 
 
 
+
+//Get the number of days since app launch
+
+// Start of code from: https://stackoverflow.com/questions/2627473/how-to-calculate-the-number-of-days-between-two-dates
+// const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
+// const launchDate = new Date(2022, 4, 31);
+// const d = new Date();
+// let currentDate = new Date(d.getFullYear(), d.getMonth, d.getDate);
+// let dayNum;
+
+// function diffDays(firstDate, secondDate){
+//   dayNum = Math.round(Math.abs((firstDate - secondDate) / oneDay));
+// } 
+// end of code from: https://stackoverflow.com/questions/2627473/how-to-calculate-the-number-of-days-between-two-dates
+
+//.addEventListener("load", diffDays(launchDate, currentDate));
+//onLoad={({nativeEvent: {source: {width, height}}}) => setImageRealSize({width, height})}
+
+
+
+
+
+
+
+
+
+
+// HOME SCREEN
+
 function HomeScreen({ navigation }) {
   return (
     <ScrollView>
-    <View style={{ flex: 1, alignItems: 'flex-start', justifyContent: 'flex-start', padding:'10%' }}>
+    <View style={{ flex: 1, alignItems: 'flex-start', justifyContent: 'flex-start', padding:'5%' }}>
       {/* <Text h1 h1Style={{ fontSize: 30, }}>{articles[dayNum]['fact']}</Text> */}
       <Image
         style={styles.dailyImage}
@@ -117,6 +130,8 @@ function HomeScreen({ navigation }) {
 }
 
 
+//TOPICS SCREEN
+
 function TopicsScreen({ navigation }) {
   return (
     <View style={{ flex: 1, alignItems: 'flex-start', justifyContent: 'flex-start' }}>
@@ -125,6 +140,8 @@ function TopicsScreen({ navigation }) {
   );
 }
 
+//SUBTOPIC SCREEN
+
 function subtopicsScreen({ navigation }) {
   return (
     <View style={{ flex: 1, alignItems: 'flex-start', justifyContent: 'flex-start' }}>
@@ -132,6 +149,8 @@ function subtopicsScreen({ navigation }) {
     </View>
   );
 }
+
+//SUGGESTION PAGE
 
 function SuggestionScreen({ navigation }) {
   return (
@@ -173,7 +192,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   dailyImage: {
-    width: 300,
+    width: 320,
     height: 200,
   },
   text:{
